@@ -1,0 +1,39 @@
+.navbars{
+    .container{
+        padding: 10px 0px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .logo{
+            img{
+                width: 120px;
+            }
+        }
+        .links{
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        span{
+            cursor: pointer;
+        }
+        .write{
+            background-color: var(--lightGreen);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 300;
+
+            &:hover{
+                width: 48px;
+                width: 48px;
+                color: teal;
+                background-color: white;
+                border: 1px solid teal;
+            }
+        }
+    }
+}
