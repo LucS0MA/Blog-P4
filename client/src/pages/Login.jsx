@@ -1,12 +1,14 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import "../styles/login.scss";
+import { AuthContext } from "../context/authContext";
 
 // Configuration globale d'Axios pour envoyer les cookies avec chaque requête
 axios.defaults.withCredentials = true;
 
 function Login() {
+  const { currentUser, login } = useContext(AuthContext);
   const [userInfo, setUserInfo] = useState({
     username: "",
     password: "",
@@ -21,8 +23,7 @@ function Login() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    axios
-      .post("http://localhost:8800/api/auth/login", userInfo)
+    login(userInfo)
       .then((response) => {
         navigate("/");
         console.log(response);
