@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import Logo from "../assets/Logo2.png";
+import Logo1 from "../assets/logo51.png";
+import Logo2 from "../assets/29.png";
 import "../styles/navbar.scss";
 import { AuthContext } from "../context/authContext";
 import { useContext } from "react";
@@ -11,7 +13,7 @@ function NavBar() {
       <div className="container">
         <div className="logo">
           <Link to="/">
-            <img src={Logo} alt="" />
+            <img src={Logo1} alt="" />
           </Link>
         </div>
         <div className="links">
@@ -30,14 +32,14 @@ function NavBar() {
           <Link className="link" to="/?cat=food">
             <h6>FOOD</h6>
           </Link>
-          <span>{currentUser?.username}</span>
+          {/* <span>{currentUser?.username}</span>
           {currentUser ? (
             <span onClick={logout}>Logout</span>
           ) : (
             <Link className="link" to="/login">
               Login
             </Link>
-          )}
+          )} */}
           {currentUser && (
             <span className="write">
               <Link to="/write" className="link">

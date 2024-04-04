@@ -1,38 +1,46 @@
 .navbars{
+    font-family: Mons;
+    // background-color: var(--lightGreen);
+    margin-bottom: 50px;
     .container{
+        color: white;
         padding: 10px 0px;
         display: flex;
         justify-content: space-between;
         align-items: center;
         .logo{
             img{
-                width: 120px;
+                width: 200px;
             }
         }
         .links{
             display: flex;
             gap: 10px;
             align-items: center;
+            font-size: 20px;
+            margin-right: 10px;
         }
         span{
             cursor: pointer;
         }
         .write{
-            background-color: var(--lightGreen);
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
+            background-color: white;
+            color: #C484F1;
+            width: 90px;
+            height: 35px;
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: 300;
+            border: 1px solid #C484F1;
+            font-weight: 500;
 
             &:hover{
-                width: 48px;
-                width: 48px;
-                color: teal;
-                background-color: white;
-                border: 1px solid teal;
+                width: 90px;
+                height: 35px;
+                color: white;
+                background-color: #C484F1;
+                border: 1px solid white;
             }
         }
     }

@@ -1,8 +1,8 @@
 .single{
     display: flex;
     gap: 50px;
-
     .content{
+        color: white;
         flex: 5;
         display: flex;
         flex-direction: column;
@@ -37,10 +37,13 @@
             }
         }
         h1{
+            font-family: MonsI;
             font-size: 42px;
-            color: #333;
+            color: white;
         }
         p{
+            color: white;
+            font-family: Mons;
            text-align: justify; 
            line-height: 30px;
         }
@@ -53,7 +56,7 @@
 
         h1{
             font-size: 20px;
-            color: #555;
+            color: white;
         }
         .post{
             display: flex;
@@ -66,8 +69,9 @@
                 object-fit: cover;
             }
             h2{
+                font-family: MonsI;
                 font-size: 14px;
-                color: #555;
+                color: white;
             }
             button{
                 width: max-content;
@@ -75,13 +79,15 @@
                 border: none;
                 cursor: pointer;
                 background-color: white;
-                border: 1px solid teal;
-                color: teal;
+                border: 1px solid #C484F1;
+                color: #C484F1;
+                font-family: Mons;
+                font-weight: 600;
     
                 &:hover{
                     border: 1px solid white;
-                    color: black;
-                    background-color: var(--lightGreen);
+                    color: white;
+                    background-color: #C484F1;
                 }
             }
         }

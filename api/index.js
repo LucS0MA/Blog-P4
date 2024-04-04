@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(cookieParser());
 // Configuration CORS pour autoriser les requêtes en provenance de http://localhost:5173/
 const corsOptions = {
-  origin: "http://localhost:5173",
+  origin: "http://localhost:5000",
   credentials: true,
 };
 app.use(cors(corsOptions));

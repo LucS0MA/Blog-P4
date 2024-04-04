@@ -8,14 +8,44 @@
     height: 100vh;
   }
 
-  .app{
-    display: flex;
-  justify-content: center;
-  .container {
-    width: 1024px;
+  @font-face {
+    font-family: Antic;
+    src: url("../assets/fonts/AnticSlab-Regular.ttf");
   }
+  
+  @font-face {
+    font-family: AbhaBold;
+    src: url("../assets/fonts/AbhayaLibre-ExtraBold.ttf");
+  }
+  
+  @font-face {
+    font-family: MonsI;
+    src: url("../assets/fonts/Montserrat-Italic-VariableFont_wght.ttf");
+  }
+
+  @font-face {
+    font-family: Mons;
+    src: url("../assets/fonts/Montserrat-VariableFont_wght.ttf");
+  }
+  
+  
+  @font-face {
+    font-family: Play;
+    src: url("../assets/fonts/PlayfairDisplay-VariableFont_wght.ttf");
+  }
+  
+body{
+  margin: 0;
 }
 
+  .app{
+  display: flex;
+  justify-content: center;
+  background-color: #100D28;
+  .container {
+    width: 1260px;
+  }
+}
   .link {
     text-decoration: none;
     color: inherit;
