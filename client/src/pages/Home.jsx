@@ -30,7 +30,9 @@ function Home() {
         {posts.map((post) => (
           <div className="post" key={post.id}>
             <div className="img">
-              <img src={`../upload/${post.img}`} alt="" />
+              <Link className="link" to={`/post/${post.id}`}>
+                <img src={`../upload/${post.img}`} alt="" />
+              </Link>
             </div>
             <div className="content">
               <Link className="link" to={`/post/${post.id}`}>

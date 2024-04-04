@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
-import Logo from "../assets/Logo2.png";
 import Logo1 from "../assets/logo51.png";
-import Logo2 from "../assets/29.png";
+import Logout1 from "../assets/logout1.png";
 import "../styles/navbar.scss";
 import { AuthContext } from "../context/authContext";
 import { useContext } from "react";
@@ -41,11 +40,14 @@ function NavBar() {
             </Link>
           )} */}
           {currentUser && (
-            <span className="write">
-              <Link to="/write" className="link">
-                Write
-              </Link>
-            </span>
+            <div className="log-write">
+              <span className="write">
+                <Link to="/write" className="link">
+                  Write
+                </Link>
+              </span>
+              <img onClick={logout} src={Logout1} alt="logoutIcon"></img>
+            </div>
           )}
         </div>
       </div>

@@ -1,5 +1,5 @@
-import Edit from "../assets/edit.png";
-import Delete from "../assets/delete.png";
+import Edit from "../assets/edit1.png";
+import Delete from "../assets/delete1.png";
 import "../styles/single&menu.scss";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Menu from "../components/Menu";
@@ -49,7 +49,6 @@ function Single() {
       <div className="content">
         <img src={`../upload/${post?.img}`} alt="" />
         <div className="user">
-          <img src={post.userImg} alt="" />
           <div className="info">
             <span>{post.username}</span>
             <p>Posted {moment(post.date).fromNow()}</p>

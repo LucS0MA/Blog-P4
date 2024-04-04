@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import axios from "axios";
@@ -12,8 +12,19 @@ const Write = () => {
   const [title, setTitle] = useState(state?.title || "");
   const [file, setFile] = useState(null);
   const [cat, setCat] = useState(state?.cat || "");
+  const [imageUrl, setImageUrl] = useState(null);
 
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setImageUrl(reader.result);
+      };
+      reader.readAsDataURL(file);
+    }
+  }, [file]);
 
   const upload = async () => {
     try {
@@ -60,6 +71,8 @@ const Write = () => {
     return doc.body.textContent;
   };
 
+  console.log(file);
+
   return (
     <div className="add">
       <div className="content">
@@ -80,29 +93,34 @@ const Write = () => {
       </div>
       <div className="menu">
         <div className="item">
-          <h1>Publish</h1>
-          <span>
-            <b>Status: </b> Draft
-          </span>
-          <span>
-            <b>Visibility: </b> Public
-          </span>
-          <input
-            style={{ display: "none" }}
-            type="file"
-            id="file"
-            name=""
-            onChange={(e) => setFile(e.target.files[0])}
-          />
-          <label className="file" htmlFor="file">
-            Upload Image
-          </label>
-          <div className="buttons">
-            <button>Save as a draft</button>
-            <button onClick={handleSubmit}>Publish</button>
+          <div className="left-content">
+            <h1>Publish</h1>
+            <span>
+              <b>Status: </b> Draft
+            </span>
+            <span>
+              <b>Visibility: </b> Public
+            </span>
+            <input
+              style={{ display: "none" }}
+              type="file"
+              id="file"
+              name=""
+              onChange={(e) => setFile(e.target.files[0])}
+            />
+            <label className="file" htmlFor="file">
+              Upload Image
+            </label>
+            <div className="buttons">
+              <button>Save as a draft</button>
+              <button onClick={handleSubmit}>Publish</button>
+            </div>
+          </div>
+          <div className="right-content">
+            {imageUrl && <img src={imageUrl} alt="" />}
           </div>
         </div>
-        <div className="item">
+        <div className="itemCat">
           <h1>Category</h1>
           <div className="cat">
             <input

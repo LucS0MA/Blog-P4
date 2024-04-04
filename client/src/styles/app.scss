@@ -1,9 +1,7 @@
 :root {
-    --green: #4e5c2c;
-    --yellow: #e2b95b;
-    --pink: #8d214c;
-    --darkPink: #442332;
-    --orange: #df824d;
+    --white: white;
+    --pink: #C484F1;
+    --background: #100D28;
     --lightGreen: #b9e7e7;
     height: 100vh;
   }
@@ -41,7 +39,7 @@ body{
   .app{
   display: flex;
   justify-content: center;
-  background-color: #100D28;
+  background-color: var(--background);
   .container {
     width: 1260px;
   }

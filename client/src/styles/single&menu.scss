@@ -2,7 +2,7 @@
     display: flex;
     gap: 50px;
     .content{
-        color: white;
+        color: var(--white);
         flex: 5;
         display: flex;
         flex-direction: column;
@@ -15,20 +15,24 @@
         .user{
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 20px;
             font-size: 14px;
-            img{
-                width: 50px;
-                height: 50px;
-                border-radius: 50%;
-                object-fit: cover;
-            }
-            span{
-                font-weight: bold;
+
+            .info{
+                display: flex;
+                flex-direction: row;
+                align-items: baseline;
+                gap: 15px;
+                
+
+                span{
+                    font-size: 25px;
+                    font-weight: 600;
+                }
             }
             .edit{
                display: flex; 
-               gap: 5px;
+               gap: 10px;
                img{
                 width: 30px;
                 height: 30px;
@@ -39,10 +43,10 @@
         h1{
             font-family: MonsI;
             font-size: 42px;
-            color: white;
+            color: var(--white);
         }
         p{
-            color: white;
+            color: var(--white);
             font-family: Mons;
            text-align: justify; 
            line-height: 30px;
@@ -55,8 +59,9 @@
         gap: 25px;
 
         h1{
+            font-family: Mons;
             font-size: 20px;
-            color: white;
+            color: var(--white);
         }
         .post{
             display: flex;
@@ -71,23 +76,23 @@
             h2{
                 font-family: MonsI;
                 font-size: 14px;
-                color: white;
+                color: var(--white);
             }
             button{
                 width: max-content;
                 padding: 7.5px 15px;
                 border: none;
                 cursor: pointer;
-                background-color: white;
-                border: 1px solid #C484F1;
-                color: #C484F1;
+                background-color: var(--white);
+                border: 1px solid var(--pink);
+                color: var(--pink);
                 font-family: Mons;
                 font-weight: 600;
     
                 &:hover{
-                    border: 1px solid white;
-                    color: white;
-                    background-color: #C484F1;
+                    border: 1px solid var(--white);
+                    color: var(--white);
+                    background-color: var(--pink);
                 }
             }
         }

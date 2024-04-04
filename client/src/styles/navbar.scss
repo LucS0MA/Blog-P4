@@ -3,7 +3,7 @@
     // background-color: var(--lightGreen);
     margin-bottom: 50px;
     .container{
-        color: white;
+        color: var(--white);
         padding: 10px 0px;
         display: flex;
         justify-content: space-between;
@@ -23,24 +23,36 @@
         span{
             cursor: pointer;
         }
-        .write{
-            background-color: white;
-            color: #C484F1;
-            width: 90px;
-            height: 35px;
+
+        .log-write{
             display: flex;
             align-items: center;
-            justify-content: center;
-            font-weight: 300;
-            border: 1px solid #C484F1;
-            font-weight: 500;
+            gap: 20px;
 
-            &:hover{
+            img{
+                width: 30px;
+                cursor: pointer;
+            }
+
+            .write{
+                background-color: var(--white);
+                color: var(--pink);
                 width: 90px;
                 height: 35px;
-                color: white;
-                background-color: #C484F1;
-                border: 1px solid white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: 300;
+                border: 1px solid var(--pink);
+                font-weight: 500;
+    
+                &:hover{
+                    width: 90px;
+                    height: 35px;
+                    color: var(--white);
+                    background-color: var(--pink);
+                    border: 1px solid var(--white);
+                }
             }
         }
     }
